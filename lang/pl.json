@@ -1,0 +1,14 @@
+{
+	"menu.tech": "Technologie",
+	"menu.blog": "Blog",
+	"menu.about": "O nas",
+	"menu.projects": "Wyrużnione projekty",
+
+	"page": {
+		"home": {
+			"sub": "Hello Jelly",
+			"title": "Nasze hobby to tworzenie gier",
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+		}
+	}
+}
