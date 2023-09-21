@@ -55,7 +55,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n', 			//i18n for multilang page
 		'nuxt-gtag', 				//gtag google analytics
 		'@nuxtjs/google-fonts',   	//google fonts
-		'@nuxt/image'				//images
+		'@nuxt/image',				//images
+		'@hypernym/nuxt-anime',		//animations  https://github.com/hypernym-studio/nuxt-anime  https://animejs.com/documentation/
 	],
 
 	tailwindcss: {
