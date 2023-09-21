@@ -1,75 +1,29 @@
-# Nuxt 3 Minimal Starter
+# 8BitJelly
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Web dev version](https://minwest.rywal.dev/)
 
-## Setup
+## Recommended IDE Setup
 
-Make sure to install the dependencies:
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-```bash
-# npm
-npm install
+## Used
 
-# pnpm
-pnpm install
+[NuxtJs 3](https://nuxt.com/)
+[TailwindCSS](https://tailwindcss.com/)
+[AnimeJS](https://animejs.com/)
+[i18n](https://i18n.nuxtjs.org/)
+[Gtag](https://nuxt.com/modules/gtag/)
+[Google Fonts](https://google-fonts.nuxtjs.org/)
+[NuxtImage](https://image.nuxt.com/)
 
-# yarn
-yarn install
+### Develop
 
-# bun
-bun install
-```
+| function name   | command                 |
+|-----------------|-------------------------|
+| develop         | `npm run dev`           |
+| build           | `npm run build`         |
+| preview		  | `npm run preview`		|
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
