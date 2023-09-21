@@ -8,13 +8,13 @@
 
 ## Used
 
-[NuxtJs 3](https://nuxt.com/)
-[TailwindCSS](https://tailwindcss.com/)
-[AnimeJS](https://animejs.com/)
-[i18n](https://i18n.nuxtjs.org/)
-[Gtag](https://nuxt.com/modules/gtag/)
-[Google Fonts](https://google-fonts.nuxtjs.org/)
-[NuxtImage](https://image.nuxt.com/)
+* [NuxtJs 3](https://nuxt.com/)
+* [TailwindCSS](https://tailwindcss.com/)
+* [AnimeJS](https://animejs.com/)
+* [i18n](https://i18n.nuxtjs.org/)
+* [Gtag](https://nuxt.com/modules/gtag/)
+* [Google Fonts](https://google-fonts.nuxtjs.org/)
+* [NuxtImage](https://image.nuxt.com/)
 
 ### Develop
 
