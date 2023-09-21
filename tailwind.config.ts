@@ -6,6 +6,7 @@ export default <Partial<Config>>{
 			'primary': '#f15d9c',
 			'light': '#feeff5',
 			'darker': '#542137',
+			'darkest': '#4D404E',
 			inherit: "inherit",
 			current: "currentColor",
 			transparent: "transparent",
