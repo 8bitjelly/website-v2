@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-light">
-        <div class="bg-white container mx-auto mt-24">
+    <div class="bg-light w-screen h-screen py-24">
+        <div class="bg-white h-full container mx-auto">
             <Tech/>
         </div>
     </div>
