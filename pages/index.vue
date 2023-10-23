@@ -1,5 +1,10 @@
 <template>
-    <div class="h-screen w-screen flex items-center justify-center">
-        <h1 class="text-2xl">Hello Jelly 😊</h1>
+    <div class="w-screen flex justify-center overflow-x-hidden">
+
+        <Landing />
+
+        <div>
+
+        </div>
     </div>
 </template>
