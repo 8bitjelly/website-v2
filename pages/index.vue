@@ -29,9 +29,11 @@
                 <h1 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.about.title') }}</h1>
                 <p class="z-10 text-darker/80 text-md font-light">{{ $t('page.home.about.desc') }}</p>
             </div>
-            
+
 
 
         </div>
+
+        <Foter />
     </div>
 </template>
