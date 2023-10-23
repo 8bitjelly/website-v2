@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen h-[calc(100vh-100px)] pr-8 pb-12">
+    <div class="w-screen h-[calc(100vh-100px)] pr-6 pb-6 border-b-2 border-r border-[#4d404e55] rounded-br-[110px]">
         
         <div class="relative w-full h-full bg-[#4D404E] rounded-br-[90px]">
             <div class="absolute left-0 top-0 w-full h-full rounded-br-[90px] overflow-hidden">
@@ -8,26 +8,29 @@
                 <nuxt-img class="z-0 absolute left-0 bottom-0 w-3/4" src="/svg/Ellipse 5.svg" alt="circle background" loading="lazy" />
             </div>
 
-            
 
             <div class="z-50 h-auto flex w-full py-4 px-2 pr-4 justify-between items-center">
                 <button @click="openMenu()" class="z-[50] block md:hidden">
                     <nuxt-img class="w-10" src="/svg/list-bold.svg" loading="lazy" quality="40" />
                 </button>
-                <div class="menu md:hidden translate-x-[-110%] duration-700 z-50 absolute bg-white w-[calc(100%-100px)] h-auto left-2 top-2 py-20 px-12 rounded-3xl rounded-br-[40px] flex flex-col gap-y-3">
+                <div class="menu md:hidden translate-x-[-110%] duration-300 z-50 absolute bg-white w-[calc(100%-100px)] h-auto left-2 top-2 py-20 px-12 rounded-3xl rounded-br-[40px] flex flex-col gap-y-3">
+                    
                     <button @click="closeMenu()" class="absolute left-4 top-4"> <nuxt-img class="w-10" src="/svg/x-bold.svg" /> </button>
                     <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.tech') }}</NuxtLink>
                     <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.blog') }}</NuxtLink>
                     <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.about') }}</NuxtLink>
                     <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.projects') }}</NuxtLink>
-
-                    <div class="mt-2 flex justify-center space-x-2 absolute w-full left-0 bottom-4">
-                        <label for="lang" class="text-black/70 text-sm">Select language:</label>
-                        <select id="lang" v-model="locale" class="bg-primary/40 rounded-lg text-black px-2">
-                            <option class="" value="en">en</option>
-                            <option class="" value="pl">pl</option>
-                        </select>
-                    </div>
+                    <div class="absolute w-full left-0 bottom-4">
+                        <hr class="mx-4" />
+                        <div class="mt-2 flex justify-center space-x-2 ">
+                            <label for="lang" class="text-black/70 text-sm">Select language:</label>
+                            <select id="lang" v-model="locale" class="bg-primary/40 rounded-lg text-black px-2">
+                                <option class="" value="en">en</option>
+                                <option class="" value="pl">pl</option>
+                            </select>
+                        </div>
+                    </div>  
+                    
                 </div>
 
                 <NuxtLink to="/" class="z-[50]">
