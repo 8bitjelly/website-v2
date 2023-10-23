@@ -3,12 +3,30 @@
 	"menu.blog": "Blog",
 	"menu.about": "O nas",
 	"menu.projects": "Wyrużnione projekty",
+	"menu.policy": "Polityka prywatności",
 
 	"page": {
 		"home": {
 			"sub": "Hello Jelly",
 			"title": "Nasze hobby to tworzenie gier",
-			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum.",
+			"btn": "Czytaj dalej",
+			"projects": {
+				"sub": "Projekty",
+				"title": "Nasze projekty",
+				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+			},
+			"tech": {
+				"title": "Technologie",
+				"desc1": "Technologie które używamy pozwalają na wykorzystanie",
+				"desc2": "pełni potencjału platform",
+				"btn": "Sprawdź czy dasz radę"
+			},
+			"about": {
+				"sub": "O nas",
+				"title": "O naszej grupie",
+				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+			}
 		}
 	}
 }

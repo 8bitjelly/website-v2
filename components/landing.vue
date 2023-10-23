@@ -44,7 +44,7 @@
                     <h1 class="z-10 text-light text-4xl font-bold leading-tight">{{ $t('page.home.title') }}</h1>
                     <p class="z-10 text-light/80 text-md font-light">{{ $t('page.home.desc') }}</p>
                     <button class="readmore mt-2 py-1 px-4 text-white w-fit flex gap-x-2 items-center">
-                        Czytaj dalej <img class="h-7" src="/svg/arrow-bend-right-down-bold.svg" alt="">
+                        {{  $t('page.home.btn') }} <img class="h-7" src="/svg/arrow-bend-right-down-bold.svg" alt="">
                     </button>
                 </div>
             </div>
