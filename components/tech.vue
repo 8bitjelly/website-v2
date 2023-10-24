@@ -70,36 +70,35 @@
 const { $anime } = useNuxtApp()
 
 onMounted(() => {
-    let tl = $anime.timeline({
-        targets: '.blocks .el',
-        delay: function(el, i) { return i * 200 },
-        duration: 2000,
-        easing: 'easeInOutQuad',
-        loop: true,
-    })
-
-
-    tl
-    .add({
-        translateY: 50,
-    })
-    .add({
-        translateY: 0,
-    })
-
-
-    // $anime({ 
+    // let tl = $anime.timeline({
     //     targets: '.blocks .el',
-    //     keyframes: [
-    //         {translateY: 50},
-    //         {translateY: 0},
-    //     ],
-    //     direction: 'infinity',
+    //     delay: function(el, i) { return i * 200 },
+    //     duration: 2000,
+    //     easing: 'easeInOutQuad',
     //     loop: true,
-    //     easing: 'easeInOutCirc',
-    //     delay: $anime.stagger(400),
-    //     duration: 5000,
     // })
+
+
+    // tl
+    // .add({
+    //     translateY: 50,
+    // })
+    // .add({
+    //     translateY: 0,
+    // })
+
+
+    $anime({ 
+        targets: '.blocks .el',
+        keyframes: [
+            {translateY: 50},
+            {translateY: 0},
+        ],
+        loop: true,
+        easing: 'easeInOutQuad',
+        delay: function(el, i) { return i * 200 },
+        duration: 5000,
+    })
   })
 
 </script>

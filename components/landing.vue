@@ -4,9 +4,9 @@
         
             <div class="relative w-full h-full bg-[#4D404E] rounded-br-[90px]">
                 <div class="absolute left-0 top-0 w-full h-full rounded-br-[90px] overflow-hidden">
-                    <nuxt-img class="z-0 absolute right-0 top-0 w-1/2" src="/svg/Ellipse.svg" alt="circle background" loading="lazy" />
+                    <nuxt-img class="z-0 absolute right-0 top-0 w-1/2 md:w-1/4" src="/svg/Ellipse.svg" alt="circle background" loading="lazy" />
                     <nuxt-img class="z-0 absolute right-0 bottom-0 translate-x-1/2 scale-[3]" src="/svg/Ellipse 3.svg" alt="circle background" loading="lazy" />
-                    <nuxt-img class="z-0 absolute left-0 bottom-0 w-3/4" src="/svg/Ellipse 5.svg" alt="circle background" loading="lazy" />
+                    <nuxt-img class="z-0 absolute left-0 bottom-0 w-3/4 md:w-1/3" src="/svg/Ellipse 5.svg" alt="circle background" loading="lazy" />
                 </div>
 
 
@@ -40,10 +40,10 @@
 
 
                     <div class="hidden md:flex gap-x-12">
-                        <NuxtLink @click="closeMenu()" to="#" class="text-white text-xl">{{ $t('menu.tech') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#" class="text-white text-xl">{{ $t('menu.blog') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#" class="text-white text-xl">{{ $t('menu.about') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#" class="text-white text-xl">{{ $t('menu.projects') }}</NuxtLink>
+                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.tech') }}</NuxtLink>
+                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.blog') }}</NuxtLink>
+                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.about') }}</NuxtLink>
+                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.projects') }}</NuxtLink>
     
                     </div>
                 </div>
