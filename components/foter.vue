@@ -12,6 +12,16 @@
             <NuxtLink to="#">{{ $t('menu.policy') }}</NuxtLink>
         </div>
 
+        <div>
+            <div class="mt-2 flex justify-center items-center space-x-2 ">
+                <label for="lang" class="text-white/70 text-sm">Select language:</label>
+                <select id="lang" v-model="locale" class="bg-white/40 rounded-lg text-black px-2">
+                    <option class="" value="en">en</option>
+                    <option class="" value="pl">pl</option>
+                </select>
+            </div>
+        </div>
+
         <hr class="border-darker border-1 mx-8 my-4">
        
         <p class="text-darker text-center mb-4">© 2023 8BitJelly. MIT</p>
@@ -33,3 +43,12 @@
 
     </div>
 </template>
+
+<script lang="ts" setup>
+import { useI18n, useLocalePath } from '#imports'
+
+const { locale } = useI18n()
+
+const localePath = useLocalePath()
+
+</script>
