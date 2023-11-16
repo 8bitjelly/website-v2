@@ -1,6 +1,6 @@
 # 8BitJelly
 
-[![8BitJelly](https://raw.githubusercontent.com/8bitjelly/website-v2/master/public/logo_white.png)]
+[![8BitJelly](https://raw.githubusercontent.com/8bitjelly/website-v2/master/public/logo_white.png?token=GHSAT0AAAAAACFVDGX3WI4XRF64G2NPUEAUZKWBHFA)]
 
 ## Recommended IDE Setup
 
