@@ -1,6 +1,6 @@
 # 8BitJelly
 
-[Web dev version](https://minwest.rywal.dev/)
+[![8BitJelly](https://raw.githubusercontent.com/8bitjelly/website-v2/master/public/logo_white.png)]
 
 ## Recommended IDE Setup
 
