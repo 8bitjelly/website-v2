@@ -50,5 +50,4 @@ import { useI18n, useLocalePath } from '#imports'
 const { locale } = useI18n()
 
 const localePath = useLocalePath()
-
 </script>

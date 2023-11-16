@@ -62,6 +62,7 @@
                     </div>
                    
                 </div>
+
             </div>
         </div>
 
@@ -71,9 +72,29 @@
 
 
 <script setup lang="ts">
+const { locale } = useI18n()
 
-const { data: osoby, pending } = await useFetch('http://141.145.197.144:1337/api/osobies?populate=Avatar')
+const osoby = ref()
+const lang = ref(locale.value)
 
-console.log(osoby.value.data)
+const fetchPeopleByLang = async () => {
+    const { data, pending } = await useFetch(
+        `http://141.145.197.144:1337/api/osobies?populate=Avatar&locale=${lang.value}`
+    )
+    osoby.value = data.value
+}
+
+
+await fetchPeopleByLang();
+
+watch(locale, (newLocale, oldLocale) => {
+    lang.value = newLocale
+
+
+    fetchPeopleByLang()
+})
+
+
+
 
 </script>
