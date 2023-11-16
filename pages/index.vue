@@ -5,7 +5,7 @@
 
         <div class="md:grid grid-cols-2 mt-24 container mx-auto">
             <div class="flex justify-center items-cente">
-                <nuxt-img class="w-full h-full" src="/whale.png" />
+                <nuxt-img loading="lazy" class="w-full h-full" src="/whale.png" />
             </div>
             <div class="mt-24 md:mt-0">
                 <div class="px-4 flex flex-col gap-y-2 mb-8">
@@ -35,9 +35,9 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-24">
-                <div v-for="osoba in osoby.data" class="p-4 rounded-xl bg-primary/30 max-w-xs relative">
+                <div v-for="osoba in osoby.data" class="p-4 rounded-xl bg-primary/20 max-w-xs relative">
                     <div class="mb-4 h-40">
-                        <nuxt-img class="h-40" :src="'http://141.145.197.144:1337'+osoba.attributes.Avatar.data.attributes.url " alt="avatar"/>
+                        <nuxt-img loading="lazy" class="h-40" :src="'http://141.145.197.144:1337'+osoba.attributes.Avatar.data.attributes.url " :alt="osoba.attributes.Nick"/>
                     </div>
                     <div class="mb-8">
                         <div><span class="text-darker font-semibold text-xl">{{ osoba.attributes.Nick}}</span> | <span class="text-primary">{{ osoba.attributes.Stanowisko }}</span></div>
@@ -59,9 +59,13 @@
                         <a v-if="osoba.attributes.XTwitter" :href="osoba.attributes.XTwitter" target="_blank">
                             <img class="h-6 py-1" src="/icons/x.svg" alt="">
                         </a>
+                        <a v-if="osoba.attributes.TikTok" :href="osoba.attributes.TikTok" target="_blank">
+                            <img class="h-6" src="/icons/tiktok.svg" alt="">
+                        </a>
                     </div>
                    
                 </div>
+
             </div>
         </div>
 
@@ -71,9 +75,29 @@
 
 
 <script setup lang="ts">
+const { locale } = useI18n()
 
-const { data: osoby, pending } = await useFetch('http://141.145.197.144:1337/api/osobies?populate=Avatar')
+const osoby = ref()
+const lang = ref(locale.value)
 
-console.log(osoby.value.data)
+const fetchPeopleByLang = async () => {
+    const { data, pending } = await useFetch(
+        `http://141.145.197.144:1337/api/osobies?populate=Avatar&locale=${lang.value}`
+    )
+    osoby.value = data.value
+}
+
+
+await fetchPeopleByLang();
+
+watch(locale, (newLocale, oldLocale) => {
+    lang.value = newLocale
+
+
+    fetchPeopleByLang()
+})
+
+
+
 
 </script>

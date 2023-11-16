@@ -1,7 +1,7 @@
 <template>
     <div class="bg-[#A48DA1] py-4">
         <div class="w-full flex justify-center mb-8 mt-4">
-            <nuxt-img class="h-16" src="/logo_white.png" />
+            <nuxt-img class="h-16" loading="lazy" src="/logo_white.png" alt="8BitJelly"/>
         </div>
 
         <div class="flex flex-wrap justify-center gap-x-3 gap-y-2 mx-8 text-white">
@@ -50,5 +50,4 @@ import { useI18n, useLocalePath } from '#imports'
 const { locale } = useI18n()
 
 const localePath = useLocalePath()
-
 </script>
