@@ -1,6 +1,6 @@
 {
 	"menu.tech": "Technologie",
-	"menu.blog": "Blog",
+	"menu.blog": "Priorytety",
 	"menu.about": "O nas",
 	"menu.projects": "Wyrużnione projekty",
 	"menu.policy": "Polityka prywatności",
@@ -27,6 +27,11 @@
 				"title": "O naszej grupie",
 				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
 			}
+		},
+		"error": {
+			"title": "Ups! Coś poszło nie tak",
+			"desc": "Ośmiorniczki już dzielnie pracują nad naprawieniem tego błędu, tymczasem sprawdź, co u nas słychać!",
+			"btn": "Strona główna"
 		}
 	}
 }
