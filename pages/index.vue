@@ -3,7 +3,7 @@
 
         <Landing />
 
-        <div class="md:grid grid-cols-2 mt-24 container mx-auto">
+        <div id="projects" class="md:grid grid-cols-2 mt-24 container mx-auto">
             <div class="flex justify-center items-cente">
                 <nuxt-img loading="lazy" class="w-full h-full" src="/whale.png" />
             </div>
@@ -23,11 +23,11 @@
             </div>
         </div>
         
-        <div class="mt-24 flex justify-center md:block md:px-4">
+        <div id="tech" class="mt-24 flex justify-center md:block md:px-4">
             <Tech />
         </div>
 
-        <div class="mt-24 container mx-auto">
+        <div id="about" class="mt-24 container mx-auto">
             <div class="px-4 flex flex-col gap-y-2 mb-8">
                 <p class="z-10 text-primary font-bold">- {{ $t('page.home.about.sub') }}</p>
                 <h1 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.about.title') }}</h1>
