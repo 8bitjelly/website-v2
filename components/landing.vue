@@ -35,7 +35,7 @@
                     </div>
 
                     <NuxtLink to="/" class="z-[50]">
-                        <nuxt-img class="h-10" src="logo_white.png" loading="lazy" quality="40" />
+                        <nuxt-img class="h-10" src="logo_white.svg" loading="lazy" quality="40" />
                     </NuxtLink>
 
 

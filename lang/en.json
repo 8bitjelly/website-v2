@@ -1,6 +1,6 @@
 {
 	"menu.tech": "Technology",
-	"menu.blog": "Blog",
+	"menu.blog": "Priorities",
 	"menu.about": "About us",
 	"menu.projects": "Awarded projects",
 	"menu.policy": "Privacy policy",
@@ -27,6 +27,11 @@
 				"title": "About our group",
 				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
 			}
+		},
+		"error": {
+			"title": "Oops! Something went wrong",
+			"desc": "Octopuses are already working valiantly to rectify this mistake, in the meantime check out what we're up to!",
+			"btn": "Back to home"
 		}
 	}
 }
