@@ -17,10 +17,11 @@
                     <div class="menu md:hidden translate-x-[-110%] duration-300 z-50 absolute bg-white w-[calc(100%-100px)] h-auto left-2 top-2 py-20 px-12 rounded-3xl rounded-br-[40px] flex flex-col gap-y-3">
                         
                         <button @click="closeMenu()" class="absolute left-4 top-4"> <nuxt-img class="w-10" src="/svg/x-bold.svg" /> </button>
-                        <NuxtLink @click="closeMenu()" to="#tech" class="text-xl font-semibold">{{ $t('menu.tech') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.blog') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#about" class="text-xl font-semibold">{{ $t('menu.about') }}</NuxtLink>
                         <NuxtLink @click="closeMenu()" to="#projects" class="text-xl font-semibold">{{ $t('menu.projects') }}</NuxtLink>
+                        <NuxtLink @click="closeMenu()" to="#tech" class="text-xl font-semibold">{{ $t('menu.tech') }}</NuxtLink>
+                        <NuxtLink @click="closeMenu()" to="#about" class="text-xl font-semibold">{{ $t('menu.about') }}</NuxtLink>
+                        <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.blog') }}</NuxtLink>
+                        
                         <div class="absolute w-full left-0 bottom-4">
                             <hr class="mx-4" />
                             <div class="mt-2 flex justify-center items-center space-x-2 ">
@@ -40,15 +41,21 @@
 
 
                     <div class="hidden md:flex gap-x-12">
-                        <NuxtLink to="#tech" class="text-white text-xl z-50">{{ $t('menu.tech') }}</NuxtLink>
-                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.blog') }}</NuxtLink>
-                        <NuxtLink to="#about" class="text-white text-xl z-50">{{ $t('menu.about') }}</NuxtLink>
                         <NuxtLink to="#projects" class="text-white text-xl z-50">{{ $t('menu.projects') }}</NuxtLink>
-    
+                        <NuxtLink to="#tech" class="text-white text-xl z-50">{{ $t('menu.tech') }}</NuxtLink>
+                        <NuxtLink to="#about" class="text-white text-xl z-50">{{ $t('menu.about') }}</NuxtLink>
+                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.blog') }}</NuxtLink>
+                        <div class="hidden xl:flex justify-center items-center space-x-2 ">
+                            <label for="lang" class="text-white/90 text-sm">Select language:</label>
+                            <select id="lang" v-model="locale" class="bg-primary/80 rounded-lg text-white px-2 z-50">
+                                <option class="" value="en">EN</option>
+                                <option class="" value="pl">PL</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
-                <div class="z-10 mt-24 flex flex-col justify-center md:pl-16 lg:pl-24 max-w-3xl">
+                <div class="z-10 mt-20 flex flex-col justify-center md:pl-16 lg:pl-24 max-w-3xl">
                     <div class="px-4 flex flex-col gap-y-2 md:px-0 md:gap-y-5 lg:gap-y-6">
                         <p class="z-10 text-primary font-bold">- {{ $t('page.home.sub') }}</p>
                         <h1 class="z-10 text-light text-4xl font-bold leading-tight md:text-4xl lg:text-6xl">{{ $t('page.home.title') }}</h1>

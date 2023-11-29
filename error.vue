@@ -11,6 +11,7 @@
 						<p class="z-0 absolute bottom-1/2 translate-y-1/3 text-[18rem] font-semibold tracking-widest text-transparent text-8xl bg-clip-text bg-gradient-to-b from-darkest/30 to-transparent">{{ error.statusCode }}</p>
 						<p class="z-[50] text-5xl font-semibold text-darkest mb-6">{{ $t('page.error.title') }}</p>
 						<p class="z-[50] text-lg text-darkest pl-2">{{ $t('page.error.desc') }}</p>
+						<p class="text-darkest/40">{{ error.message }}</p>
 						<button @click="handleClearError" class="z-[50] bg-primary py-2 px-4 rounded-xl text-white mt-4 duration-300 hover:bg-primary/80 hover:shadow-primary/50 hover:shadow-xl">{{ $t('page.error.btn') }}</button>
 					</div>
 					<div class="pl-24">
