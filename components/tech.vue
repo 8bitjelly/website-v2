@@ -70,24 +70,6 @@
 const { $anime } = useNuxtApp()
 
 onMounted(() => {
-    // let tl = $anime.timeline({
-    //     targets: '.blocks .el',
-    //     delay: function(el, i) { return i * 200 },
-    //     duration: 2000,
-    //     easing: 'easeInOutQuad',
-    //     loop: true,
-    // })
-
-
-    // tl
-    // .add({
-    //     translateY: 50,
-    // })
-    // .add({
-    //     translateY: 0,
-    // })
-
-
     $anime({ 
         targets: '.blocks .el',
         keyframes: [
