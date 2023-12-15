@@ -52,7 +52,7 @@
                             <img class="h-6" src="/icons/globe.svg" alt="">
                         </a>
                         <a v-if="osoba.attributes.XTwitter" :href="osoba.attributes.XTwitter" target="_blank">
-                            <img class="h-6 py-1" src="/icons/x.svg" alt="">
+                            <img class="h-6 py-1" src="/icons/X.svg" alt="">
                         </a>
                         <a v-if="osoba.attributes.TikTok" :href="osoba.attributes.TikTok" target="_blank">
                             <img class="h-6" src="/icons/tiktok.svg" alt="">
