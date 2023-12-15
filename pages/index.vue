@@ -5,7 +5,7 @@
 
         <div id="projects" class="md:grid grid-cols-2 mt-24 container mx-auto">
             <div class="flex justify-center items-cente">
-                <nuxt-img loading="lazy" class="w-full h-full" src="/whale.png" />
+                <img loading="lazy" class="whale w-full h-full" src="/whale.png" />
             </div>
             <div class="mt-24 md:mt-0">
                 <div class="px-4 flex flex-col gap-y-2 mb-8">
@@ -32,7 +32,7 @@
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-24">
                 <div v-for="osoba in osoby.data" class="p-4 rounded-xl bg-primary/20 max-w-sm relative">
                     <div class="mb-4 h-40">
-                        <nuxt-img loading="lazy" class="h-40" :src="'http://141.145.197.144:1337'+osoba.attributes.Avatar.data.attributes.url " :alt="osoba.attributes.Nick"/>
+                        <nuxt-img loading="lazy" class="h-40 rounded-lg" :src="'http://141.145.197.144:1337'+osoba.attributes.Avatar.data.attributes.url " :alt="osoba.attributes.Nick"/>
                     </div>
                     <div class="mb-8">
                         <div><span class="text-darker font-semibold text-xl">{{ osoba.attributes.Nick}}</span> | <span class="text-primary">{{ osoba.attributes.Stanowisko }}</span></div>
@@ -71,9 +71,11 @@
 
 <script setup lang="ts">
 const { locale } = useI18n()
+const { $anime } = useNuxtApp()
 
 const osoby = ref()
 const lang = ref(locale.value)
+
 
 const fetchPeopleByLang = async () => {
     const { data, pending } = await useFetch(
@@ -92,6 +94,20 @@ watch(locale, (newLocale, oldLocale) => {
     fetchPeopleByLang()
 })
 
+onMounted(()=> {
+    
+    $anime({ 
+        targets: '.whale',
+        keyframes: [
+            {translateY: 30},
+            {translateY: 0},
+        ],
+        loop: true,
+        delay: 700,
+        easing: 'easeInOutQuad',
+        duration: 3000,
+    })
+})
 
 
 

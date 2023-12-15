@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 
-                <nuxt-img class="z-0 absolute -right-12 bottom-12 w-1/2 -scale-x-150 scale-y-150 md:-scale-x-100 md:scale-y-100 md:-right-1/4 md:-bottom-12" src="/whale.png" />
+                <img class="while z-0 absolute scale-150 md:scale-100 -right-12 bottom-12 w-1/2 md:-right-1/4 md:-bottom-12" src="/whale-inverted.png" />
             </div>
 
         
@@ -94,6 +94,42 @@ const { locale } = useI18n()
 
 const localePath = useLocalePath()
 
+const { $anime } = useNuxtApp()
+
+
+
+onMounted(() => {
+
+    console.log(window.innerWidth)
+
+    if (window.innerWidth < 768) {
+        $anime({ 
+            targets: '.while',
+            keyframes: [
+                {translateY: 50, scale: [1.5, 1.5]},
+                {translateY: 0, scale: [1.5, 1.5]},
+            ],
+            loop: true,
+            easing: 'easeInOutQuad',
+            duration: 5000,
+        })
+    }else{
+        $anime({ 
+            targets: '.while',
+            keyframes: [
+                {translateY: 50, scale: [1, 1]},
+                {translateY: 0, scale: [1, 1]},
+            ],
+            loop: true,
+            easing: 'easeInOutQuad',
+            duration: 5000,
+        })
+    }
+
+  })
+
+
+
 
 let closeMenu = () => {
     let menu = document.querySelector('.menu')
@@ -104,9 +140,5 @@ let openMenu = () => {
     let menu = document.querySelector('.menu')
     menu?.classList.remove('translate-x-[-110%]')
 }
-
-onMounted(() => {
-
-})
 
 </script>

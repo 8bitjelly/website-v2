@@ -14,18 +14,18 @@
 			"projects": {
 				"sub": "Projekty",
 				"title": "Nasze projekty",
-				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+				"desc": "Oto projekty które stworzyliśmy i już możesz testować na własną rękę!"
 			},
 			"tech": {
 				"title": "Technologie",
 				"desc1": "Technologie które używamy pozwalają na wykorzystanie",
 				"desc2": "pełni potencjału platform",
-				"btn": "Sprawdź czy dasz radę"
+				"btn": "Sprawdź nasz github"
 			},
 			"about": {
 				"sub": "O nas",
 				"title": "O naszej grupie",
-				"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta sapien quis consequat ultricies. Vestibulum lectus mi, volutpat id velit ultricies, lacinia rhoncus ipsum."
+				"desc": "Cały nasz zespół jest stworzony przez osoby z zamiłowaniem do gier! Każdy z nasz różni się ale tworzymy razem coś niesamowitego!"
 			}
 		},
 		"error": {
