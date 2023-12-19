@@ -32,7 +32,7 @@
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-24">
                 <div v-for="osoba in osoby.data" class="p-4 rounded-xl bg-primary/20 max-w-sm relative">
                     <div class="mb-4 h-40">
-                        <nuxt-img loading="lazy" class="h-40 rounded-lg" :src="'http://141.145.197.144:1337'+osoba.attributes.Avatar.data.attributes.url " :alt="osoba.attributes.Nick"/>
+                        <img loading="lazy" class="h-40 rounded-lg" :src="'https://panel.makoto.com.pl'+osoba.attributes.Avatar.data.attributes.url " :alt="osoba.attributes.Nick"/>
                     </div>
                     <div class="mb-8">
                         <div><span class="text-darker font-semibold text-xl">{{ osoba.attributes.Nick}}</span> | <span class="text-primary">{{ osoba.attributes.Stanowisko }}</span></div>
@@ -57,6 +57,12 @@
                         <a v-if="osoba.attributes.TikTok" :href="osoba.attributes.TikTok" target="_blank">
                             <img class="h-6" src="/icons/tiktok.svg" alt="">
                         </a>
+                        <a v-if="osoba.attributes.Facebook" :href="osoba.attributes.Facebook" target="_blank">
+                            <img class="h-6" src="/icons/facebook.svg" alt="">
+                        </a>
+                        <a v-if="osoba.attributes.Itchio" :href="osoba.attributes.Itchio" target="_blank">
+                            <img class="h-6" src="/icons/itchio.svg" alt="">
+                        </a>
                     </div>
                    
                 </div>
@@ -79,7 +85,7 @@ const lang = ref(locale.value)
 
 const fetchPeopleByLang = async () => {
     const { data, pending } = await useFetch(
-        `http://141.145.197.144:1337/api/osobies?populate=Avatar&locale=${lang.value}`
+        `https://panel.makoto.com.pl/api/osobies?populate=Avatar&locale=${lang.value}`
     )
     osoby.value = data.value
 }

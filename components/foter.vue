@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#A48DA1] py-4">
+    <div class="bg-[#A48DA1] py-4 px-6">
         <div class="block md:hidden">
             <div class="w-full flex justify-center mb-8 mt-4">
                 <nuxt-img class="h-16" loading="lazy" src="/logo_white.svg" alt="8BitJelly"/>
@@ -25,7 +25,7 @@
 
             <hr class="border-darker border-1 mx-8 my-4">
         
-            <p class="text-darker text-center mb-4">© 2023 8BitJelly. MIT</p>
+            <p class="text-darker text-center mb-4">© 2024 8BitJelly. MIT</p>
 
             <div class="flex justify-center gap-x-4">
                 <NuxtLink to="#">
