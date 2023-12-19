@@ -20,11 +20,11 @@ export default defineNuxtConfig({
 				},
 				{
 					name: 'description',
-					content: ''
+					content: 'Our hobby is game development. We are a small but close-knit team who love making games and want to share this with others. The most important thing for us is support, having fun together and being creative while learning new knowledge and skills.'
 				},
 				{
 					name: 'keywords',
-					content: ''
+					content: 'gamedev, gamedev polish, gamedev poland, game studio, games, game, developers, developer, 8bit, 8bitjelly, unity, unity game development, unity game, indie game, independent game, unity games, game making, fromsoftware games, indie game dev, digital extreme, unity game dev'
 				},
 				{
 					name: 'og:image',
@@ -35,6 +35,10 @@ export default defineNuxtConfig({
 					rel: 'icon',
 					type: 'image/x-icon',
 					href: '/favicon.ico'
+				},
+				{
+					rel: 'stylesheet',
+					href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 				},
 				{
 					rel: 'alternate',
