@@ -5,12 +5,12 @@
 
         <div id="projects" class="md:grid grid-cols-2 mt-24 container mx-auto">
             <div class="flex justify-center items-cente">
-                <img loading="lazy" class="whale w-full h-full" src="/whale.png" />
+                <img loading="lazy" class="whale w-full h-full object-contain" src="/whale.png" />
             </div>
             <div class="mt-24 md:mt-0">
                 <div class="px-4 flex flex-col gap-y-2 mb-8">
                     <p class="z-10 text-primary font-bold">- {{ $t('page.home.projects.sub') }}</p>
-                    <h1 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.projects.title') }}</h1>
+                    <h3 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.projects.title') }}</h3>
                     <p class="z-10 text-darker/80 text-md font-light">{{ $t('page.home.projects.desc') }}</p>
                 </div>
 
@@ -25,7 +25,7 @@
         <div id="about" class="mt-24 container mx-auto">
             <div class="px-4 flex flex-col gap-y-2 mb-8">
                 <p class="z-10 text-primary font-bold">- {{ $t('page.home.about.sub') }}</p>
-                <h1 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.about.title') }}</h1>
+                <h3 class="z-10 text-darker text-4xl font-bold leading-tight">{{ $t('page.home.about.title') }}</h3>
                 <p class="z-10 text-darker/80 text-md font-light max-w-xl">{{ $t('page.home.about.desc') }}</p>
             </div>
 
@@ -62,6 +62,9 @@
                         </a>
                         <a v-if="osoba.attributes.Itchio" :href="osoba.attributes.Itchio" target="_blank">
                             <img class="h-6" src="/icons/itchio.svg" alt="">
+                        </a>
+                        <a v-if="osoba.attributes.Artstation" :href="osoba.attributes.Artstation" target="_blank">
+                            <img class="h-6" src="/icons/artstation.svg" alt="">
                         </a>
                     </div>
                    
