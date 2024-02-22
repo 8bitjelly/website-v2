@@ -1,5 +1,5 @@
 <template>
-    <div v-if="pending">
+    <div v-if="isPending">
         <div>
             <div class="bg-gray-400 w-64 h-64 rounded-xl mb-4 animate-pulse"></div>
             <p class="text-xl text-primary font-bold">Gierka 1</p>
@@ -13,9 +13,9 @@
       :breakpoints="breakpoints"
       :autoplay="2000"
     >
-        <slide v-for="(game, idx) in data.data" :key="idx" >
+        <slide v-for="(game, idx) in games.data" :key="idx" >
             <div class="carousel__item h-[30rem] hover:shadow-lg hover:shadow-primary/40 duration-100 bg-primary/20 border border-white backdrop-blur-xl rounded-xl p-4">
-                <img loading="lazy" class="h-64 w-64 object-cover rounded-xl mb-2" :src="'https://panel.makoto.com.pl'+game.attributes.gameLogo.data.attributes.url " :alt="game.attributes.name"/>
+                <img loading="lazy" class="h-64 w-64 object-cover rounded-xl mb-2" :src="'https://panel.8bitjelly.com'+game.attributes.gameLogo.data.attributes.url " :alt="game.attributes.name"/>
                 <p class="text-xl text-primary font-bold mb-4">{{ game.attributes.name }}</p>
                 <p class="text-darker text-sm w-64">{{ game.attributes.shortDescription }}</p>
                 <a :href="game.attributes.link" target="_blank" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/60 text-white px-5 py-1 rounded-lg border border-primary">{{ $t('page.home.projects.btn') }}</a>
@@ -33,14 +33,33 @@
 
 
 <script setup lang="ts">
+const { locale } = useI18n()
+
+const games = ref()
+const isPending = ref(false)
+const lang = ref(locale.value)
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
+let fetchGameByLang = async () => {
+  const { data, pending, error } = await useFetch(
+    `https://panel.8bitjelly.com/api/games?populate=gameLogo&locale=${lang.value}`
+  )
 
-const { data, pending, error } = await useFetch(
-    `https://panel.makoto.com.pl/api/games?populate=gameLogo&locale=en`
-)
+  games.value = data.value
+  isPending.value = pending.value
+}
+
+
+await fetchGameByLang();
+
+watch(locale, (newLocale, oldLocale) => {
+    lang.value = newLocale
+
+
+    fetchGameByLang()
+})
 
 const settings = {
   itemsToShow: 1,
