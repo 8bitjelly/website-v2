@@ -5,8 +5,8 @@
             <div class="relative w-full h-full bg-[#4D404E] rounded-br-[90px]">
                 <div class="absolute left-0 top-0 w-full h-full rounded-br-[90px] overflow-hidden">
                     <nuxt-img class="z-0 absolute right-0 top-0 w-1/2 md:w-1/4" src="/svg/Ellipse.svg" alt="circle background" loading="lazy" />
-                    <nuxt-img class="z-0 absolute right-0 bottom-0 translate-x-1/2 scale-[3]" src="/svg/Ellipse 3.svg" alt="circle background" loading="lazy" />
-                    <nuxt-img class="z-0 absolute left-0 bottom-0 w-3/4 md:w-1/3" src="/svg/Ellipse 5.svg" alt="circle background" loading="lazy" />
+                    <nuxt-img class="z-0 absolute right-0 bottom-0 translate-x-1/2 scale-[3]" src="/svg/Ellipse3.svg" alt="circle background" loading="lazy" />
+                    <nuxt-img class="z-0 absolute left-0 bottom-0 w-3/4 md:w-1/3" src="/svg/Ellipse5.svg" alt="circle background" loading="lazy" />
                 </div>
 
 
@@ -20,7 +20,7 @@
                         <NuxtLink @click="closeMenu()" to="#projects" class="text-xl font-semibold">{{ $t('menu.projects') }}</NuxtLink>
                         <NuxtLink @click="closeMenu()" to="#tech" class="text-xl font-semibold">{{ $t('menu.tech') }}</NuxtLink>
                         <NuxtLink @click="closeMenu()" to="#about" class="text-xl font-semibold">{{ $t('menu.about') }}</NuxtLink>
-                        <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.blog') }}</NuxtLink>
+                        <!-- <NuxtLink @click="closeMenu()" to="#" class="text-xl font-semibold">{{ $t('menu.blog') }}</NuxtLink> -->
                         
                         <div class="absolute w-full left-0 bottom-4">
                             <hr class="mx-4" />
@@ -44,7 +44,7 @@
                         <NuxtLink to="#projects" class="text-white text-xl z-50">{{ $t('menu.projects') }}</NuxtLink>
                         <NuxtLink to="#tech" class="text-white text-xl z-50">{{ $t('menu.tech') }}</NuxtLink>
                         <NuxtLink to="#about" class="text-white text-xl z-50">{{ $t('menu.about') }}</NuxtLink>
-                        <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.blog') }}</NuxtLink>
+                        <!-- <NuxtLink to="#" class="text-white text-xl z-50">{{ $t('menu.blog') }}</NuxtLink> -->
                         <div class="hidden xl:flex justify-center items-center space-x-2 ">
                             <label for="lang" class="text-white/90 text-sm">Select language:</label>
                             <select id="lang" v-model="locale" class="bg-primary/80 rounded-lg text-white px-2 z-50">
@@ -99,8 +99,6 @@ const { $anime } = useNuxtApp()
 
 
 onMounted(() => {
-
-    console.log(window.innerWidth)
 
     if (window.innerWidth < 768) {
         $anime({ 

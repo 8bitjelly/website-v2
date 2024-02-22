@@ -20,7 +20,7 @@
             </div>
             <div class="lg:px-12 flex justify-center lg:justify-start">
                 <div class="bg-white/50 py-12 px-4 lg:p-12 rounded-3xl max-w-2xl h-fit">
-                    <h1 class="text-4xl font-semibold">{{ $t('page.contact.title') }}</h1>
+                    <h2 class="text-4xl font-semibold">{{ $t('page.contact.title') }}</h2>
                     <div class="pt-6">
                         <form id="messform" @submit.prevent="submitForm">
 
@@ -133,7 +133,7 @@ onMounted(() => {
     }
 })
 
-const WEB3FORMS_ACCESS_KEY = "71eefaed-9403-4ff8-a29c-7f03ffd1e6ff"
+const WEB3FORMS_ACCESS_KEY = "d503b806-9e80-42a2-a4e0-5ca88f9da25e"
 
 const fname = ref('')
 const lname = ref('')
@@ -202,7 +202,7 @@ const submitForm = async () => {
 			body: JSON.stringify({
 				access_key: WEB3FORMS_ACCESS_KEY,
                 from_name: 'Formularz kontaktowy - 8BitJelly',
-                whymess: whymess.value,
+                reason: whymess.value,
 				subject: subject.value,
 				name: fname.value + " " + lname.value,
 				email: email.value,

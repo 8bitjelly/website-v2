@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
 		head: {
-			title: '8BitJelly - 😊',
+			title: '8BitJelly - Hobby group game development',
 			htmlAttrs: {
 				lang: 'en',
 			},
@@ -29,6 +29,10 @@ export default defineNuxtConfig({
 				{
 					name: 'og:image',
 					content: '/og.png'
+				},
+				{
+					name: 'theme-color',
+					content: '#feeff5'
 				}
 			],
 			link: [{
@@ -38,7 +42,9 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'stylesheet',
-					href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+					href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
+					media: 'print', 
+					onload: 'this.media="all"'
 				},
 				{
 					rel: 'alternate',
@@ -52,12 +58,16 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'stylesheet',
-					href: 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
+					href: 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+					media: 'print', 
+					onload: 'this.media="all"'
+				},
+				{
+					rel: 'canonical',
+					href: 'https://8bitjelly.com'
 				}
 			],
-			script: [{
-				src: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-			}]
+
 		},
 
 	},
@@ -69,6 +79,9 @@ export default defineNuxtConfig({
 		'@nuxt/image',				//images
 		'@hypernym/nuxt-anime',		//animations  https://github.com/hypernym-studio/nuxt-anime  https://animejs.com/documentation/
 		'nuxt-swiper',				//swiper		https://nuxt.com/modules/swiper
+		'@nuxtjs/robots',			//robots
+		'@nuxtjs/sitemap',			//sitemap	
+		'vue3-carousel-nuxt',		//carousel
 	],
 
 	tailwindcss: {
@@ -97,11 +110,29 @@ export default defineNuxtConfig({
 		}
 	},
 
+	gtag: {
+		id: 'G-PCLLKCCJSV'
+	},
+
 	googleFonts: {
 		display: 'swap',
 		families: {
 			Poppins: [100, 200, 300, 400, 500, 600, 700, 800, 900],
 		}
+	},
+
+
+	robots: {
+		UserAgent: '*',
+		Disallow: '',
+		Sitemap: 'https://8bitjelly.com/sitemap.xml'
+	},
+
+
+	site: {
+		sources: [
+			'/api/__sitemap__/urls',
+		  ]
 	},
 
 

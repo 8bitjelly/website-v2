@@ -7,7 +7,7 @@
 
             <div class="flex flex-wrap justify-center gap-x-3 gap-y-2 mx-8 text-white">
                 <NuxtLink to="#">{{ $t('menu.tech') }}</NuxtLink>
-                <NuxtLink to="#">{{ $t('menu.blog') }}</NuxtLink>
+                <!-- <NuxtLink to="#">{{ $t('menu.blog') }}</NuxtLink> -->
                 <NuxtLink to="#">{{ $t('menu.about') }}</NuxtLink>
                 <NuxtLink to="#">{{ $t('menu.projects') }}</NuxtLink>
                 <NuxtLink to="#">{{ $t('menu.policy') }}</NuxtLink>
@@ -28,17 +28,14 @@
             <p class="text-darker text-center mb-4">© 2024 8BitJelly. MIT</p>
 
             <div class="flex justify-center gap-x-4">
-                <NuxtLink to="#">
-                    <nuxt-img src="/svg/instagram-logo-duotone.svg" />
+                <NuxtLink target="_blank" to="https://www.instagram.com/8bitjelly/">
+                    <nuxt-img class="h-6" src="/svg/instagram-logo-duotone.svg" />
                 </NuxtLink>
-                <NuxtLink to="#">
-                    <nuxt-img src="/svg/facebook-logo-duotone.svg" />
+                <NuxtLink target="_blank" to="https://www.facebook.com/8bitjelly">
+                    <nuxt-img class="h-6" src="/svg/facebook-logo-duotone.svg" />
                 </NuxtLink>
-                <NuxtLink to="#">
-                    <nuxt-img src="/svg/github-logo-duotone.svg" />
-                </NuxtLink>
-                <NuxtLink to="#">
-                    <nuxt-img src="/svg/discord-logo-duotone.svg" />
+                <NuxtLink target="_blank" to="https://github.com/8bitjelly">
+                    <nuxt-img class="h-6" src="/svg/github-logo-duotone.svg" />
                 </NuxtLink>
             </div>
         </div>
@@ -51,7 +48,7 @@
                 <div>
                     <div class="flex gap-x-4 text-white">
                         <NuxtLink to="#">{{ $t('menu.tech') }}</NuxtLink>
-                        <NuxtLink to="#">{{ $t('menu.blog') }}</NuxtLink>
+                        <!-- <NuxtLink to="#">{{ $t('menu.blog') }}</NuxtLink> -->
                         <NuxtLink to="#">{{ $t('menu.about') }}</NuxtLink>
                         <NuxtLink to="#">{{ $t('menu.projects') }}</NuxtLink>
                         <NuxtLink to="#">{{ $t('menu.policy') }}</NuxtLink>
@@ -72,17 +69,14 @@
                     <p class="text-darker text-center mb-4">© 2023 8BitJelly. MIT</p>
                 </div>
                 <div class="flex gap-x-3">
-                    <NuxtLink to="#">
-                        <nuxt-img src="/svg/instagram-logo-duotone.svg" />
+                    <NuxtLink target="_blank" to="https://www.instagram.com/8bitjelly/">
+                        <nuxt-img class="h-6" src="/svg/instagram-logo-duotone.svg" />
                     </NuxtLink>
-                    <NuxtLink to="#">
-                        <nuxt-img src="/svg/facebook-logo-duotone.svg" />
+                    <NuxtLink target="_blank" to="https://www.facebook.com/8bitjelly">
+                        <nuxt-img class="h-6" src="/svg/facebook-logo-duotone.svg" />
                     </NuxtLink>
-                    <NuxtLink to="#">
-                        <nuxt-img src="/svg/github-logo-duotone.svg" />
-                    </NuxtLink>
-                    <NuxtLink to="#">
-                        <nuxt-img src="/svg/discord-logo-duotone.svg" />
+                    <NuxtLink target="_blank" to="https://github.com/8bitjelly">
+                        <nuxt-img class="h-6" src="/svg/github-logo-duotone.svg" />
                     </NuxtLink>
                 </div>
             </div>
